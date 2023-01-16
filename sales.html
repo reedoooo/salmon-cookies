@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reed's Salmon Cookies</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li class="home"><a href="https://reedoooo.github.io/opCookies/index.html">Home</a></li>
+          <li class="sales"><a href="https://reedoooo.github.io/opCookies/sales.html">Sale Info</a></li>
+          <li class="contact"><a href="https://reedoooo.github.io/opCookies/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+  <main>
+    <h3>Welcome to your Internal Sales Data!</h3>
+
+    <div class='about'>
+      <p>The table below represents the random calculated cookies sold per hour during the hours of 6am to 7pm at each store location</p>
+    </div>
+  
+      <form id='addLocation'>
+        <fieldset>
+          <legend>Add a New City and City Data</legend>
+          
+          <div class='formDiv'>
+            <label for='cityName'>City Name: </label>
+            <input type='text' name='cityName' required>
+  
+            <label for='min'>Minimum Customers Per Hour: </label>
+            <input type="text" name='min' required>
+          </div>
+          
+          <div class='formDiv'>
+            <label for='max'>Maximum Customers Per Hour: </label>
+            <input type='text' name='max' required>
+    
+            <label for='avgCookies'>Average Cookies Sold per Customer: </label>
+            <input type='text' name='avgCookies' required>
+          </div>
+  
+          <input id='button' type="submit" value="Add to Table below!">
+        </fieldset>
+      </form>
+    
+    <table id='cookieData' border="2">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">city</th>
+          <th scope="col">6:00</th>
+          <th scope="col">7:00</th>
+          <th scope="col">8:00</th>
+          <th scope="col">9:00</th>
+          <th scope="col">10:00</th>
+          <th scope="col">11:00</th>
+          <th scope="col">12:00</th>
+          <th scope="col">1:00</th>
+          <th scope="col">2:00</th>
+          <th scope="col">3:00</th>
+          <th scope="col">4:00</th>
+          <th scope="col">5:00</th>
+          <th scope="col">6:00</th>
+          <th scope="col">7:00</th>
+          <th scope="col">totals</th>
+        </tr>
+      </thead>
+      
+      <tbody id="tableBody">
+                                        
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <div id='info'>
+      <p><strong class='strong'>HQ Location:</strong> 1234 Beachfront Drive, Seatle, WA 98745 <img id='cutter' src="" alt="cutter"> </p>
+      <p><strong class='strong'>Hours of Operation: </strong> 6:00 AM to 8:00 PM</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
