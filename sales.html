@@ -31,16 +31,16 @@
       <p>The table below represents the random calculated cookies sold per hour during the hours of 6am to 7pm at each store location</p>
     </div>
   
-      <!--<form id='addLocation'>
-        <fieldset>
-          <legend>Add a New City and City Data</legend>
+      <form id='addLocation'>
+        <fieldset> <!--Provides a grouping for a part of an HTML form-->
+          <legend>Add a New City and City Data</legend> <!--The legend provides a caption for the fieldset-->
           
           <div class='formDiv'>
-            <label for='cityName'>City Name: </label>
-            <input type='text' name='cityName' required>
+            <label for='cityName'>City Name: </label> <!--Label specifies the title of the text track-->
+            <input type='text' name='cityName' required> <!--The input element is used to create interactive controls for web-based forms in order to accept data from the user-->
   
             <label for='min'>Minimum Customers Per Hour: </label>
-            <input type="text" name='min' required>
+            <input type='text' name='min' required>
           </div>
           
           <div class='formDiv'>
@@ -51,14 +51,14 @@
             <input type='text' name='avgCookies' required>
           </div>
   
-          <input id='button' type="submit" value="Add to Table below!">
+          <input id='addStore' type="submit" value="Add City to Table!">
         </fieldset>
-      </form> -->
+      </form>
     
     <table id='cookieData' border="2">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">city</th>
+          <th scope="col">City</th>
           <th scope="col">6:00</th>
           <th scope="col">7:00</th>
           <th scope="col">8:00</th>
@@ -73,7 +73,7 @@
           <th scope="col">5:00</th>
           <th scope="col">6:00</th>
           <th scope="col">7:00</th>
-          <th scope="col">totals</th>
+          <th scope="col">Totals</th>
         </tr>
       </thead>
       
