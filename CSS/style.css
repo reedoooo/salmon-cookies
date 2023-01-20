@@ -7,39 +7,28 @@ body {
   
   html nav {
     overflow: hidden;
+    letter-spacing: 0.1em;
   }
-  footer {
-    margin-top:30px;
-    background-color:salmon;
 
-  }
-  
   html nav, a {
     background-color: #928D89;
-    color: rgb(33, 30, 30);
     width: auto;
-    height: 90px;
     overflow: hidden;
+    border-radius:0px 0px 10px 10px;
   }
-  
-  nav > ul > li {
-    line-height: 90px;
-  }
-  
+
   html nav a {
+    display:flex;
     background-color: #928D89;
     color: rgb(249, 209, 205);
+    height: 70px;
     width: auto;
-    height: 90px;
     float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding: 10px 20px 10px 20px;
     text-align: center;
     /* padding: 20px 30px 10px 30px; */
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   
   html nav a:hover {
@@ -47,25 +36,14 @@ body {
     color: rgb(33, 30, 30);
   }
   
-  .statement > p {
-    font-size: 1.3rem;
+  nav > ul > li {
+    line-height: 70px;
   }
-  
-  .contact {
-    float: right;
+
+  nav-border {
+    border-radius: 30px;
   }
-  footer:nth-child(1) {
-    background-color:salmon;
-  }
-  
-  .sales {
-    margin-right: 50px;
-  }
-  
-  .home {
-    margin-left: 50px;
-  }
-  
+
   html h1 {
     font-weight: 900;
     font-size: 6rem;
@@ -91,6 +69,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(223, 106, 93);
   }
+
+  /*.statement > p {
+    font-size: 1.3rem;
+  }*/
+  
+  .contact {
+    float: right;
+    margin-right: 30px;
+  }
+
+  .sales {
+    margin-right: 50px;
+  }
+  
+  .home {
+    margin-left: 50px;
+  }
   
   #logo {
     width: 50px;
@@ -106,35 +101,7 @@ body {
     width: 50%;
     content: 50%;
   }
-  
-  #family {
-    width: 700px;
-    margin-top: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  
-  #fourFish {
-    width: 400px;
-    float: left;
-    margin-top: 0;
-  }
-  
-  #cutter {
-    width: 25px;
-    padding: 5px 5px;
-    margin-bottom: -12px;
-  }
-  
-  #chinook {
-    width: 250px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
+
   
   div {
     background-color: rgba(255, 234, 240, 0.651);
@@ -165,12 +132,11 @@ body {
   #info {
     margin-left: auto;
     margin-right: auto;
-  
-    background-color: rgb(249, 209, 205);
-    width: 800px;
+      width: 800px;
     padding: 20px;
     text-align: center;
     overflow: hidden;
+    background-color:transparent;
   }
 
   #info2 {
@@ -196,6 +162,133 @@ body {
     font-weight: bolder;
   }
   
+  article {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    overflow: hidden;
+  }
+  
+  article > img, section {
+    width: 50%;
+    float: left;
+  }
+  
+  article > #shirt {
+    width: 400px;
+    margin-right: 60px;
+    margin-top: 0;
+  }
+  
+  article > section > p {
+    font-size: 1.75rem;
+    padding-top: 70px;
+    vertical-align: middle;
+  }
+  
+  .specialA {
+    font-weight: bold;
+    background-color: transparent;
+  }
+  
+  #addLocation {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+  fieldset {
+    border: solid 1px black;
+    padding: 15px;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+  }
+  
+  .formDiv {
+    width: 50%;
+    float: left;
+    background-color: salmon;
+  }
+  
+  .formDiv label {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .formDiv input {
+    height: 25px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  #button {
+    background-color: seashell;
+    border: dashed 1px gray;
+    padding: 10px;
+    position: relative;
+    float: right;
+    font-size: 1.3rem;
+  }
+  
+  #button:hover {
+    background-color: lightgray;
+  }
+
+  th {
+    font-weight: bold;
+  }
+  
+  td {
+    text-align: center;
+  }
+
+  footer {
+    margin-top:30px;
+    background-color:salmon;
+
+  }
+  footer:nth-child(1) {
+    background-color:salmon;
+  }
+  
+  footer > p {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  #cutter {
+    width: 25px;
+    padding: 5px 5px;
+    margin-bottom: -12px;
+  }
+/*
+  #family {
+    width: 700px;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  #fourFish {
+    width: 400px;
+    float: left;
+    margin-top: 0;
+  }
+  
+  #chinook {
+    width: 250px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
   #contact {
     width: 50%;
     padding: 30px;
@@ -255,92 +348,5 @@ body {
   #addresses > ul > li {
     padding: 10px;
   }
-  
-  article {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1300px;
-    overflow: hidden;
-  }
-  
-  article > img, section {
-    width: 50%;
-    float: left;
-  }
-  
-  article > #shirt {
-    width: 400px;
-    margin-right: 60px;
-    margin-top: 0;
-  }
-  
-  article > section > p {
-    font-size: 1.75rem;
-    padding-top: 70px;
-    vertical-align: middle;
-  }
-  
-  .specialA {
-    font-weight: bold;
-    background-color: transparent;
-  }
-  
-  footer > p {
-    width: 400px;
-    margin: 0 auto;
-  }
-  
-  #addLocation {
-    width: 900px;
-    margin: 0 auto;
-    padding-top: 30px;
-  }
-  
-  fieldset {
-    border: solid 1px black;
-    padding: 15px;
-  }
-  
-  fieldset legend {
-    font-weight: bold;
-  }
-  
-  .formDiv {
-    width: 50%;
-    float: left;
-    background-color: salmon;
-  }
-  
-  .formDiv label {
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .formDiv input {
-    height: 25px;
-    width: 200px;
-    margin-bottom: 10px;
-  }
-  
-  #button {
-    background-color: seashell;
-    border: dashed 1px gray;
-    padding: 10px;
-    position: relative;
-    float: right;
-    font-size: 1.3rem;
-  }
-  
-  #button:hover {
-    background-color: lightgray;
-  }
-  
-  th {
-    font-weight: bold;
-  }
-  
-  td {
-    text-align: center;
-  }
+
+  */

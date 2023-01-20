@@ -46,6 +46,14 @@ StoreLocation.prototype.avgCookiesPerHour = function () {
   console.log(this.totalCookies);
 };
 
+StoreLocation.prototype.dailyLocationTotal = function() {
+  var sumOfCookies = 0;
+  for (var i = 0; i < this.cookiesPerHour.length; i++) {
+    sumOfCookies = this.cookiesPerHour[i] + sumOfCookies;
+  }
+  return sumOfCookies;
+};
+
 StoreLocation.prototype.renderTableData = function () {
   let tableBody = document.getElementById('tableBody');
   let tableRow = document.createElement('tr');
@@ -66,7 +74,22 @@ StoreLocation.prototype.renderTableData = function () {
   let cellTotal = document.createElement('td');
   cellTotal.innerHTML = this.totalCookies;
   tableRow.appendChild(cellTotal);
+
+  let tableFootCell = document.createElement('th');
+  tableFootCell.innerHTML = 'Totals';
+  tableRow.appendChild(tableFootCell);
+
+  let superTotal = 0;
+  for (let i = 0; i < allStoreLocations.length; i++) {
+    superTotal = superTotal + allStoreLocations[i].dailyLocationTotal();
+  }
+  tableFootCell = document.createElement('td');
+  tableFootCell.innerHTML = superTotal;
+  tableRow.appendChild(tableFootCell);
+  tableRow.id = 'footer';
+  tableBody.appendChild(tableRow);
 };
+
 
 new StoreLocation('Seattle', 23, 65, 6.3);
 new StoreLocation('Tokyo', 3, 24, 1.2);
@@ -90,18 +113,53 @@ function customCity(event) {
 
   let newStoreInput = new StoreLocation(valueOne, valueTwo, valueThree, valueFour);
 
-  //let lastRow = document.getElementById('last-Row');
-
-  console.log(valueTwo);
-  console.log(valueThree);
-  console.log(valueFour);
-
-
   allStoreLocations.push(newStoreInput);
 
   newStoreInput.avgCustomers();
   newStoreInput.avgCookiesPerHour();
-
   newStoreInput.renderTableData();
 
 }
+
+
+/*
+function renderTableFooter (allLocations) {
+  var table = document.getElementById('cookieData');
+  var row = document.createElement('tr');
+  var tableFootCell = document.createElement('th');
+  var hoursOfDay = 14;
+  tableFootCell.textContent = 'Totals';
+  row.appendChild(tableFootCell);
+
+  var cookieTotalArray = [];
+  // to look at 14 hours of the day for 14 totals cells
+  for (var i = 0; i < hoursOfDay; i++) {
+    var cookieTotal = 0;
+    // add up each index from all locations
+    for (var j = 0; j < allLocations.length; j++) {
+      cookieTotal = cookieTotal + allLocations[j].cookiesPerHourArray[i];
+    }
+    cookieTotalArray.push(cookieTotal);
+    tableFootCell = document.createElement('td');
+    tableFootCell.textContent = cookieTotalArray[i];
+    row.appendChild(tableFootCell);
+  }
+
+  var superTotal = 0;
+  for (var i = 0; i < allLocations.length; i++) {
+    superTotal = superTotal + allLocations[i].dailyLocationTotal();
+  }
+  tableFootCell = document.createElement('td');
+  tableFootCell.textContent = superTotal;
+  row.appendChild(tableFootCell);
+  row.id = 'footer';
+  table.appendChild(row);
+};
+
+  let footerElement = document.getElementById('footer');
+  footerElement.parentNode.removeChild(footerElement); // referenced where I got this in the README
+
+
+  renderTableFooter(allStoreLocations); 
+
+  */
