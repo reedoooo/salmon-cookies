@@ -61,7 +61,7 @@ body {
   }
   
   text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(33, 30, 30);
   }
   
@@ -113,7 +113,8 @@ body {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: transparent;
+    background-color: rgba(250, 175, 176, .4);
+
   }
   
   table, td, th {
@@ -121,22 +122,25 @@ body {
     border: solid black 1px;
     border-collapse: collapse;
     padding: 10px;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
   }
   
   #cookieData {
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   #info {
     margin-left: auto;
     margin-right: auto;
-      width: 800px;
+    width: 800px;
     padding: 20px;
     text-align: center;
     overflow: hidden;
-    background-color:transparent;
+    background-color: rgba(250, 175, 176, .4);
+    margin-bottom: 50px;
   }
 
   #info2 {
@@ -144,10 +148,11 @@ body {
     margin-right: auto;
     margin-bottom: 50px;
     width: 800px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     overflow: hidden;
-    background-color:transparent;
+    background-color:rgba(250, 175, 176, .4);
+    
   }
   
   #info2 p {
@@ -157,8 +162,19 @@ body {
   #info p {
     display: inline;
   }
+
+  a:link { text-decoration: none; }
+
+  a:visited { text-decoration: none; }
+
+  a:active { text-decoration: none; }
+
+  a:hover {
+    color:grey; 
+  }
   
   .strong {
+    color: rgb(33, 30, 30);
     font-weight: bolder;
   }
   
@@ -200,7 +216,8 @@ body {
   
   fieldset {
     border: solid 1px black;
-    padding: 15px;
+    padding: 30px;
+    background-color: rgba(250, 175, 176, .4);
   }
   
   fieldset legend {
@@ -210,7 +227,8 @@ body {
   .formDiv {
     width: 50%;
     float: left;
-    background-color: salmon;
+    background-color: rgba(250, 175, 176, .4);
+
   }
   
   .formDiv label {
@@ -249,6 +267,7 @@ body {
   footer {
     margin-top:30px;
     background-color:salmon;
+    
 
   }
   footer:nth-child(1) {
